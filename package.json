@@ -1,19 +1,19 @@
 {
   "name": "jaka-bot",
   "version": "1.0.0",
-  "description": "fuck",
+  "description": "i had to rewrite this shit for you, appreciate what im doing here",
   "main": "index.js",
-  "engines": {
-    "node": "12.18.3"
-  },
   "scripts": {
-    "dev": "react-scripts start",
-    "start": "serve -s build",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "jakanz",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "github.com/jakanz/jaka-bot"
+  },
+  "dependencies": {
+    "discord.js": "^12.3.1"
+  }
 }
