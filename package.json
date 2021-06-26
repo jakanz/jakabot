@@ -9,10 +9,6 @@
   "keywords": [],
   "author": "jakanz",
   "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "github.com/jakanz/jaka-bot"
-  },
   "dependencies": {
     "discord.js": "^12.3.1"
   }

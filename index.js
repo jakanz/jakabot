@@ -1,32 +1,46 @@
-// Const variables for bot
 const Discord = require('discord.js');
+
+const fs = require('fs');
 const client = new Discord.Client();
+const commandPrefix = 'j!';
+const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 
-// Login
-client.login(process.env.JAKA_TOKEN);
+client.login('NzQwOTUwNjQ2NzYwNDA3MDgy.XyweEA.Ob16aHeh3DN42kHfATgeMpfgP20');
+client.on('ready', (async) => {
+    console.log('k its online now do some shit yeah yeah');
+    }
+)
 
-// Prefix for bot commands
-const prefix = 'j!';
+client.commands = new Discord.Collection();
+for(const file of commandFiles){
+    const command = require(`./commands/${file}`);
+    client.commands.set(command.name, command);
+}
 
-// Successful login message
-client.on('ready', () => {
-    console.log('"jaka-bot!!~" is now online!');
-
-    var spamChannel = client.channels.cache.get('763946037169225728');
-    setInterval(() => {
-        spamChannel.send("||<@723132701791485962>|| dm jaka if i stop, even if he's offline");
-    }, 1);
-})
-
-// Bot commands!
 client.on('message', message => {
-    // If the message content does not start with the prefix or the message author is the bot, ignore.
-    if(!message.content.startsWith(prefix) || message.author.bot) return;
+    if(!message.content.startsWith(commandPrefix) || message.author.bot) return;
 
-    // Const variables for commands
-    const args = message.content.slice(prefix.Length).split(" ");
+    const args = message.content.slice(commandPrefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
-    // Social medias!
-
+    // general
+    switch (command){
+        // general
+        case "help":
+            client.commands.get("help").execute(message,args);
+            break;
+        case "socials":
+            client.commands.get("socials").execute(message,args);
+            break;
+            // fun
+        case "secs":
+            client.commands.get("secs").execute(message,args);
+            break;
+        case "sex":
+            client.commands.get("sex").execute(message,args);
+            break;
+        case "hentai":
+            client.commands.get("hentai").execute(message,args);
+            break;
+    }
 })
