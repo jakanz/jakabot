@@ -18,10 +18,7 @@ module.exports = {
 
                 *Fun*
                 **secs** You got bamboozled by the sex command, so you have come here to find out how to achieve comedy.
-                **sex** Find out for yourself. ;)
-                
-                *NSFW*
-                **hentai** COMING SOON`
+                **sex** Find out for yourself. ;)`
                 },
                 {
                 name: "*** __-- Command Prefix --__ ***",
