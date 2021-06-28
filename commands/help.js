@@ -17,6 +17,7 @@ module.exports = {
                 **socials** Lists all of jaka's socials.
 
                 *Fun*
+                **meme** Sends you a neat little meme for your entertainment.
                 **secs** You got bamboozled by the sex command, so you have come here to find out how to achieve comedy.
                 **sex** Find out for yourself. ;)`
                 },

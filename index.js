@@ -8,6 +8,10 @@ const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith(
 client.login('NzQwOTUwNjQ2NzYwNDA3MDgy.XyweEA.Ob16aHeh3DN42kHfATgeMpfgP20');
 client.on('ready', (async) => {
     console.log('k its online now do some shit yeah yeah');
+
+    let randomStatus = ["with big tiddies | j!help","with fatty cocks | j!help","with your mom xdd | j!help","with funny ducks | j!help"]
+    let status = randomStatus[Math.floor(Math.random() * randomStatus.length)]
+    client.user.setActivity(status,{});
     }
 )
 
@@ -23,24 +27,17 @@ client.on('message', message => {
     const args = message.content.slice(commandPrefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
-    // general
-    switch (command){
-        // general
-        case "help":
+        // General
+        if (command == 'help'){
             client.commands.get("help").execute(message,args);
-            break;
-        case "socials":
+        } else if (command == 'socials'){
             client.commands.get("socials").execute(message,args);
-            break;
-            // fun
-        case "secs":
-            client.commands.get("secs").execute(message,args);
-            break;
-        case "sex":
+        } 
+        // Fun
+        else if (command == 'meme'){
+            client.commands.get("meme").execute(message,args);
+        } else if (command == 'sex'){
             client.commands.get("sex").execute(message,args);
-            break;
-        case "hentai":
-            client.commands.get("hentai").execute(message,args);
-            break;
+        }
     }
-})
+)
