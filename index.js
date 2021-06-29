@@ -5,15 +5,16 @@ const client = new Discord.Client();
 const commandPrefix = 'j!';
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 
-client.login('NzQwOTUwNjQ2NzYwNDA3MDgy.XyweEA.Ob16aHeh3DN42kHfATgeMpfgP20');
+client.login(process.env.BOT_TOKEN);
 client.on('ready', (async) => {
     console.log('k its online now do some shit yeah yeah');
 
-    let randomStatus = ["with big tiddies | j!help","with fatty cocks | j!help","with your mom xdd | j!help","with funny ducks | j!help"]
-    let status = randomStatus[Math.floor(Math.random() * randomStatus.length)]
-    client.user.setActivity(status,{});
-    }
-)
+    setInterval(() => {
+        let randomStatus = ["with big tiddies | j!help","with fatty cocks | j!help","with your mom xdd | j!help","with funny ducks | j!help","with my code, as usual | j!help","with deez nuts ha goteem | j!help"]
+        let status = randomStatus[Math.floor(Math.random() * randomStatus.length)]
+        client.user.setActivity(status);
+    },10000)
+})
 
 client.commands = new Discord.Collection();
 for(const file of commandFiles){
