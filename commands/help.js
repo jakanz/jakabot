@@ -4,7 +4,7 @@ module.exports = {
     name: 'help',
     description: "help",
     execute(message, args){
-        var hexColors = ['cc2323', 'c70039', '581845', '23cc35', '23cc60', '12e85f', '12e8e2', '128de8', '194de1', '3519e1', '5019e1', '8619e1', 'a119e1', 'e1194a', 'e11932', 'ff5500', 'ffa600', 'ffcd00']
+        const hexColors = [JSON.parse(hexColors)] // See hexColors.json in json folder
         const randomChooser = hexColors[Math.floor(Math.random() * hexColors.length)]
         message.channel.send(`**${message.author.toString()}** - I've DM'd you a command list!`);
         message.author.send({embed: {

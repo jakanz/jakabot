@@ -5,13 +5,14 @@ const client = new Discord.Client();
 const commandPrefix = 'j!';
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 
-client.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN); // Retreive bot login token from Heroku config variables
 client.on('ready', (async) => {
-    console.log('k its online now do some shit yeah yeah');
+    console.log('k its online now do some shit yeah yeah'); // Confirm the bot's online
 
+    // Set random Discord status every 10000ms (10 seconds)
     setInterval(() => {
-        let randomStatus = ["with big tiddies | j!help","with fatty cocks | j!help","with your mom xdd | j!help","with funny ducks | j!help","with my code, as usual | j!help","with deez nuts ha goteem | j!help"]
-        let status = randomStatus[Math.floor(Math.random() * randomStatus.length)]
+        const randomStatus = [JSON.parse(randomStatus)]
+        const status = randomStatus[Math.floor(Math.random() * randomStatus.length)]
         client.user.setActivity(status);
     },10000)
 })
@@ -23,22 +24,14 @@ for(const file of commandFiles){
 }
 
 client.on('message', message => {
-    if(!message.content.startsWith(commandPrefix) || message.author.bot) return;
+    if(!message.content.startsWith(commandPrefix) || message.author.bot) return; // If message does not contain the command prefix or if the message is written by the bot, ignore
 
-    const args = message.content.slice(commandPrefix.length).split(/ +/);
-    const command = args.shift().toLowerCase();
+    const args = message.content.slice(commandPrefix.length).split(/ +/); // Slice off the space for bot to understand command (?)
+    const command = args.shift().toLowerCase(); // If command has uppercase, shift whole command to lowercase
 
-        // General
-        if (command == 'help'){
-            client.commands.get("help").execute(message,args);
-        } else if (command == 'socials'){
-            client.commands.get("socials").execute(message,args);
-        } 
-        // Fun
-        else if (command == 'meme'){
-            client.commands.get("meme").execute(message,args);
-        } else if (command == 'sex'){
-            client.commands.get("sex").execute(message,args);
+    const commandList = ["help", "socials", "meme", "sex"]
+    if (Array.prototype.includes(command, commandList)) { // If a command from commandList is used (with prefix), execute command from file
+        client.commands.get(command).execute(message,args);
         }
     }
 )
