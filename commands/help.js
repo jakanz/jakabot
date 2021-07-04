@@ -1,14 +1,12 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
+const cmdRsrc = require('../json/cmdRsrc.json')
 module.exports = {
     name: 'help',
     description: "help",
     execute(message, args){
-        const hexColors = [JSON.parse(hexColors)] // See hexColors.json in json folder
-        const randomChooser = hexColors[Math.floor(Math.random() * hexColors.length)]
+        const hexColorPick = cmdRsrc.hexColors[Math.floor(Math.random() * cmdRsrc.hexColors.length)]
         message.channel.send(`**${message.author.toString()}** - I've DM'd you a command list!`);
         message.author.send({embed: {
-            color: randomChooser,
+            color: hexColorPick,
             title: "You requested help. Well, it's here!",
             description: "Thank you for allowing me to assist you! I greatly appreciate it. Here are some items that may help you in find what you need:",
             fields: [{
