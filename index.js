@@ -5,13 +5,13 @@ const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith(
 const config = require('./json/config.json')
 const cmdRsrc = require('./json/cmdRsrc.json')
 
-client.login(config.token) // Retreive bot login token from Heroku config variables
+client.login(config.token) // Retreive bot login token from config.json
 client.on('ready', (async) => {
     console.log('k its online now do some shit yeah yeah'); // Confirm the bot's online
 
-    client.user.setActivity('BOOTING UP...')
+    client.user.setActivity('currently booting...')
     setInterval(() => {
-        const status = cmdRsrc.randomStatus[Math.floor(Math.random() * cmdRsrc.randomStatus.length)] // Select random status from status array
+        const status = cmdRsrc.randomStatus[Math.floor(Math.random() * cmdRsrc.randomStatus.length)] // Select random status from status array json
         client.user.setActivity(status);},10000) // Set random Discord status every 10000ms (10 seconds)
     }
 )

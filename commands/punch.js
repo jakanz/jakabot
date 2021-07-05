@@ -17,8 +17,7 @@ module.exports = {
                     return
                 }
             } 
-        }
-        if (!args[0]) {
+        } if (!args[0]) {
             message.channel.send(`${message.author.toString()} forgot to mention a user, so they took a throw at some empty air. Nice one, Forrest.`)
             return
         }
