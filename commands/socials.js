@@ -7,5 +7,5 @@ module.exports = {
         **YouTube** https://www.youtube.com/channel/UCtg-X3MuK1ZInT-UCpHCtqQ
         **Twitter** https://twitter.com/jakanz4
         **Discord** PRIVATE FOR NOW
-        **Snapchat** jakanz_official`)
+        **Snapchat** jakanz-official`)
     }}
