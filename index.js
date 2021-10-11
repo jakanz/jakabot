@@ -18,7 +18,7 @@ client.on('ready', (async) => {
     }
 )
 
-// Setting commands
+// Prepare for command usage 
 client.commands = new Discord.Collection();
 for(const file of commandFiles){
     const command = require(`./commands/${file}`);
@@ -32,8 +32,7 @@ client.on('message', message => {
     const args = message.content.slice(config.prefix.length).split(/ +/); // Slice off the space for bot to understand command
     const command = args.shift().toLowerCase(); // If command has uppercase, shift whole command to lowercase
 
-    const commandList = ["help", "meme", "punch", "socials"] // TODO: add to cmdRsrc.json. Defines what commands are available for use
-    if (commandList.includes(command)) { // If a command from commandList is used (with prefix), execute
+    if (cmdRsrc.commandList.includes(command)) { // If a command from commandList is used (with prefix), execute
         client.commands.get(command).execute(message,args); // Execute command
         }
     }
