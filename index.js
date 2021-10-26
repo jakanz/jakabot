@@ -1,13 +1,14 @@
-// Retrieval of necessary bot parts
-const Discord = require('discord.js'); // Retrieve discord.js library
-const fs = require('fs'); // Retrieve file system
-const client = new Discord.Client(); // Retrieve 
-const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js')); // Retrieve JavaScript commands
+// Retrieve necessary bot parts
+const Discord = require('discord.js') // Retrieve discord.js library
+const fs = require('fs') // Retrieve file system
+const client = new Discord.Client() // Retrieve client
+const commandFiles = fs.readdirSync('./commands/') // Retreive commands --
+    .filter(file => file.endsWith('.js')) // -- Filter for JavaScript files
 const config = require('./json/config.json') // Retrieve config for settings
 const cmdRsrc = require('./json/cmdRsrc.json') // Retrieve command resources
 
 // Bot login
-client.login(config.token) // Retreive bot login token from config.json
+client.login(config.token) // Retreive login token from config.json
 client.on('ready', (async) => {
     console.log('k its online now do some shit yeah yeah'); // Confirm successful boot via terminal
 
