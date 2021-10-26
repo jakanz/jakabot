@@ -3,14 +3,14 @@ module.exports = {
     name: 'help',
     description: "help",
     execute(message, args){
-        message.reply('A message has been sent to you via DMs with some information!');
+        message.reply({content:"Check your direct messages - I sent you some information you may use!", ephemeral:"true"})
 
         // Pick sidebar color
         let hexColor = cmdRsrc.hexColors[Math.floor(Math.random() * cmdRsrc.hexColors.length)] // Pick color from cmdRsrc
         message.author.send({embed: {
             color: hexColor,
             title: "Is that someone in need of help I hear?",
-            description: "Thank you for allowing me to assist you! I greatly appreciate it. Here are some items that may help you in find what you need:",
+            description: "Thank you for allowing me to assist you! I greatly appreciate it. Here are some items that may help you find what you need:",
             fields: [{
                 name: "**__Commands__**",
                 value: `W.I.P.`
