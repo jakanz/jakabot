@@ -16,6 +16,4 @@ module.exports = {
                 { name: "**__Command Prefix__**", value: "The prefix is j!. Note that there can be a space after the prefix and the command can work just fine."},
                 { name: "**__Why was this bot made?__**", value: "This was originally made as a joke among me and some friends. I don't really hope to make this public, but feel free to share. I don't really care."},
                 { name: "**__How come some commands are buggy? Why isn't the help page updated?__**", value: "The bot is in a very early stage right now so I don't expect to finish the bot anytime soon, so bugs will be fixed as time goes on."},)
-        message.author.send({embeds: [helpEmbed]});
-    }
-}
+        message.author.send({embeds: [helpEmbed]}) }}

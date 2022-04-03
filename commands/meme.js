@@ -1,5 +1,4 @@
 const fs = require('fs')
-const { Client, Message } = require("discord.js")
 module.exports = {
     name: 'meme',
     description: "Funny memes, because what is a bot without fun?",
@@ -13,19 +12,16 @@ module.exports = {
             case 'img':
                 let imgChoose = memeImg[Math.floor(Math.random()*memeImg.length)]
                 message.channel.send({files:[`./media/M_img/${imgChoose}`]})
-                break;
+                break
             case 'gif':
                 let gifChoose = memeGif[Math.floor(Math.random()*memeGif.length)]
                 message.channel.send({files:[`./media/M_gif/${gifChoose}`]})
-                break;
+                break
             case 'vid':
                 let vidChoose = memeVid[Math.floor(Math.random()*memeVid.length)]
                 message.channel.send({files:[`./media/M_vid/${vidChoose}`]})
-                break;
+                break
             default:
                 let imgDefault = memeImg[Math.floor(Math.random()*memeImg.length)]
                 message.channel.send("You did not specify your preferred meme (or you simply misspelled the argument), so I defaulted to send an image. For further reference, the arguments for my meme command are `gif`, `img`, and `vid`.", {files:[`./media/M_img/${imgDefault}`]})
-                break;
-        }
-    }
-}
+                break }}}

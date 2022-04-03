@@ -1,6 +1,4 @@
 const cmdRsrc = require('../json/cmdRsrc.json') // Retrieve cmdRsrc
-const { Client, Intents, Channel } = require('discord.js') // Retreive client
-const client = new Client({ intents: [Intents.FLAGS.GUILD_MESSAGES,Intents.FLAGS.GUILD_MESSAGE_TYPING] })
 module.exports = {
     name: '8ball',
     description: "Ask a question and determine the answer to it with the magic 8-ball.",
@@ -16,19 +14,12 @@ module.exports = {
                 case 'ballpositive':
                     let positivePrediction = cmdRsrc.ballpositive[Math.floor(Math.random()*cmdRsrc.ballpositive.length)]
                     message.channel.sendTyping(2500)
-                    message.reply(`:8ball::green_circle:  ${positivePrediction}`)
-                    break;
+                    message.reply(`:8ball::green_circle:  ${positivePrediction}`); break
                 case 'ballnoncommittant':
                     let noncommittantPrediction = cmdRsrc.ballnoncommittant[Math.floor(Math.random()*cmdRsrc.ballnoncommittant.length)]
                     message.channel.sendTyping(2500)
-                    message.reply(`:8ball::orange_circle:  ${noncommittantPrediction}`)
-                    break;
+                    message.reply(`:8ball::orange_circle:  ${noncommittantPrediction}`); break
                 case 'ballnegative':
                     let negativePrediction = cmdRsrc.ballnegative[Math.floor(Math.random()*cmdRsrc.ballnegative.length)]
                     message.channel.sendTyping(2500)
-                    message.reply(`:8ball::red_circle:  ${negativePrediction}`)
-                    break;
-            }
-        }
-    }
-}
+                    message.reply(`:8ball::red_circle:  ${negativePrediction}`); break }}}}

@@ -1,4 +1,3 @@
-const { Client, Message } = require("discord.js")
 module.exports = {
     name: 'socials',
     description: "Social medias of creator - jakanz",
@@ -8,5 +7,4 @@ module.exports = {
         **YouTube** https://www.youtube.com/c/jakanz
         **Twitter** Private for the time being
         **Discord** Snowblind#3526
-        **Snapchat** jakanz_official`)
-    }}
+        **Snapchat** jakanz_official`) }}
