@@ -1,7 +1,7 @@
 const { Client, Message } = require("discord.js")
 module.exports = {
     name: 'socials',
-    description: "jaka medias",
+    description: "Social medias of creator - jakanz",
     execute(message){
         message.channel.reply(`All of jaka's social media accounts (at least most that he would prefer public) can be found below.
         

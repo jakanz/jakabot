@@ -1,7 +1,7 @@
 const { Client, Message } = require("discord.js")
 module.exports = {
     name: 'punch',
-    description: "pow !!",
+    description: "Pow, bitch!",
     execute(message, args){
         if (args[0]){
             if (message.author.id == message.mentions.users.first()){ // If the message author mentions themselves

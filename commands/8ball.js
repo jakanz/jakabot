@@ -3,7 +3,7 @@ const { Client, Intents, Channel } = require('discord.js') // Retreive client
 const client = new Client({ intents: [Intents.FLAGS.GUILD_MESSAGES,Intents.FLAGS.GUILD_MESSAGE_TYPING] })
 module.exports = {
     name: '8ball',
-    description: "predictions",
+    description: "Ask a question and determine the answer to it with the magic 8-ball.",
     execute(message, args){
         if(!args[0]){message.reply("How did you manage to forget to ask a magic 8-ball a question?")}
         else {

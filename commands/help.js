@@ -2,11 +2,11 @@ const { MessageEmbed } = require('discord.js')
 const cmdRsrc = require('../json/cmdRsrc.json') // Retrieve cmdRsrc
 module.exports = {
     name: 'help',
-    description: "help",
+    description: "Ask me for help. I won't mind. :)",
     execute(message){
         message.reply("Check your direct messages - I've messaged you with some information you may find useful!")
 
-        const helpEmbed = new MessageEmbed()
+        const helpEmbed = new MessageEmbed() // TODO: Add context menu for commands 
             .setColor(cmdRsrc.hexColors[Math.floor(Math.random()*cmdRsrc.hexColors.length)])
             .setTitle("Is that someone in need of help I hear?")
             .setDescription("Thank you for allowing me to assist you! I greatly appreciate it. Here are some items that may help you in find what you need:")

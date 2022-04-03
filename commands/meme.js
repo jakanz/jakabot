@@ -2,7 +2,7 @@ const fs = require('fs')
 const { Client, Message } = require("discord.js")
 module.exports = {
     name: 'meme',
-    description: "haha funnys",
+    description: "Funny memes, because what is a bot without fun?",
     execute(message, args){
         // Retrieve memes from files
         const memeImg = fs.readdirSync('C:/Users/freem/Desktop/media/projects/jakabot/media/meme/M_img')
