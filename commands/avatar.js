@@ -8,7 +8,7 @@ module.exports = {
             .setColor("RANDOM") // "RANDOM" is a built-in Discord.js function, doesn't print text
             .setTitle(`${user.tag}'s avatar`)
             .setImage(user.displayAvatarURL({dynamic:true}))
-            .setFooter({text:`Avatar requested by ${message.author}`, embeds:message.author.displayAvatarURL({dynamic:true})})
+            .setFooter({text:`Avatar requested by ${message.author.tag}`, embeds:message.author.displayAvatarURL({dynamic:true})})
         
         if(!message.mentions.users.first()){message.reply({content:"You didn't mention a user, so I defaulted to grab your avatar.",embeds:[avatarEmbed]})}
         else {message.reply({embeds:[avatarEmbed]})} }}
