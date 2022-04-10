@@ -6,7 +6,7 @@ module.exports = {
         if(!args[0]){message.reply("How did you manage to forget to ask a magic 8-ball a question?")}
         else {
             // Determine positive, noncommittant, or negative response
-            var possiblePredictions = ['ballpositive', 'ballnoncommittant', 'ballnegative']
+            var possiblePredictions = ['ballpositive', 'ballnoncommittant', 'ballnegative'] // TODO: Add 2/4 positive - 1/4 noncomm - 1/4 negative chance functions
             const prediction = possiblePredictions[Math.floor(Math.random()*possiblePredictions.length)]
 
             // Choose an answer from its respective response type

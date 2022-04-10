@@ -6,8 +6,8 @@ module.exports = {
     execute(message){
         message.reply("Check your direct messages - I've messaged you with some information you may find useful!")
 
-        const helpEmbed = new MessageEmbed() // TODO: Add context menu for commands 
-            .setColor(cmdRsrc.hexColors[Math.floor(Math.random()*cmdRsrc.hexColors.length)])
+        const helpEmbed = new MessageEmbed() // TODO: Add context menu for commands and other categories
+            .setColor("RANDOM") // "RANDOM" is a built-in Discord.js function, doesn't print text
             .setTitle("Is that someone in need of help I hear?")
             .setDescription("Thank you for allowing me to assist you! I greatly appreciate it. Here are some items that may help you in find what you need:")
             .setTimestamp()

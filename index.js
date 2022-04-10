@@ -1,4 +1,4 @@
-// Dependencies
+// Dependencies and intents
 const Discord = require('discord.js') // Retrieve discord.js library
 const { Client, Intents } = require('discord.js') // Retreive client
 const client = new Client({ intents: [Intents.FLAGS.GUILDS,Intents.FLAGS.GUILD_MESSAGES,Intents.FLAGS.GUILD_MESSAGE_TYPING,Intents.FLAGS.DIRECT_MESSAGES] }) // State intents

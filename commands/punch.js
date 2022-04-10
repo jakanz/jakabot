@@ -1,9 +1,9 @@
 module.exports = {
     name: 'punch',
     description: "Pow, bitch!",
-    execute(message, args){
+    execute(message){
         if (!message.mentions.users.first()){ // No argument (mentioned user) given or not a mention
-            message.channel.send(`${message.author.toString()} didn't mention a user correctly, so they took a throw at some empty air.`)}
+            message.channel.send(`${message.author.toString()} didn't mention a user correctly, so they took a throw at some empty air.`)}            
         else if (message.mentions.users.first()){
             if (message.mentions.users.first() == message.author.id){ // If the message author mentions themselves
                 message.channel.send(`${message.author.toString()} is such a retard they punched themselves into an unrecoverable vegetative state! Nice going, Terri Schiavo.`)}
