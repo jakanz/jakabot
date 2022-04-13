@@ -1,5 +1,4 @@
 const { MessageEmbed } = require('discord.js')
-const cmdRsrc = require('../json/cmdRsrc.json') // Retrieve cmdRsrc
 module.exports = {
     name: 'help',
     description: "Ask me for help. I won't mind. :)",

@@ -11,5 +11,7 @@ module.exports = {
                 if (message.mentions.users.first() == 740950646760407082){ // If mentioned user is the bot
                     message.reply("Why are you hitting me? Jesus, this is what I get for trying to provide a fun service? Fucking cunt.")}
                 else { // If it isn't the bot or the author, then it must be another user
-                    const mentionUser = message.mentions.users.first().id // ID of mentioned user to variable
-                    message.channel.send(`${message.author.toString()} just fucking w-w-**WHACKED** <@${mentionUser}>! :punch::boom:`) }}}}} // TODO: add punch gif embed
+                    const mentionUser = message.mentions.users.first().id // ID of mentioned user to const
+                    message.channel.send(`${message.author.toString()} just fucking w-w-**WHACKED** <@${mentionUser}>! :punch::boom:`) }}}}} 
+                    
+                    // TODO: add punch gif embed
