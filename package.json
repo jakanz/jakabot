@@ -1,6 +1,8 @@
 {
   "dependencies": {
+    "@discordjs/rest": "^0.4.1",
     "@discordjs/voice": "^0.8.0",
+    "discord-api-types": "^0.31.2",
     "discord-reply": "^0.1.2",
     "discord.js": "^13.6.0"
   }

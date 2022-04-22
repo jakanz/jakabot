@@ -1,8 +1,6 @@
-{
+{   "commandList":["8ball","avatar","help","meme","ping","punch","socials"],
     "randomStatus":["with big tiddies | j!help","with fatty cocks | j!help","with your mom xdd | j!help","with funny ducks | j!help","with my code, as usual | j!help","with deez nuts ha goteem | j!help"],
-    "commandList":["8ball","avatar","help","meme","punch","socials"],
     
     "ballpositive":["It is certain.","It is decidedly so.","Without a doubt.","Yes definitely.","You may rely on it.","As I see it, yes.","Most likely.","Outlook good.","Yes.","Signs point to yes."],
     "ballnoncommittant":["Reply hazy, try again.","Ask again later.","Better not tell you now.","Cannot predict now.","Concentrate and ask again."],
-    "ballnegative":["Don't count on it.","My reply is no.","My sources say no.","Outlook not so good.","Very doubtful."]
-}
+    "ballnegative":["Don't count on it.","My reply is no.","My sources say no.","Outlook not so good.","Very doubtful."] }
