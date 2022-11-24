@@ -14,4 +14,4 @@ module.exports = {
                     const mentionUser = message.mentions.users.first().id // ID of mentioned user to const
                     message.channel.send(`${message.author.toString()} just fucking w-w-**WHACKED** <@${mentionUser}>! :punch::boom:`) }}}}} 
                     
-                    // TODO: add punch gif embed
+                    // TODO: add punch gif embed and randomize punch message

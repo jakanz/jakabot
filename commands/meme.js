@@ -17,4 +17,4 @@ module.exports = {
             case 'vid': let vidChoose = memeVid[Math.floor(Math.random()*memeVid.length)]
                         message.channel.send({files:[`./media/meme/vid/${vidChoose}`]}); break
             default:    let imgDefault = memeImg[Math.floor(Math.random()*memeImg.length)] // TODO: Add randomizer to determine img, gif, or vid usage
-                        message.channel.send({content:"You didn't specify your preferred meme (or you misspelled the argument), so I defaulted to send an image. For further reference, the arguments for memes are `img`, `gif`, and `vid`.",files:[`./media/meme/img/${imgDefault}`]}); break }}}
+                        message.channel.send({content:`You didn't specify your preferred meme (or you misspelled the argument), so I defaulted to send an image.\nFor further reference, the arguments for memes are 'img', 'gif', and 'vid'.`,files:[`./media/meme/img/${imgDefault}`]}); break }}}
