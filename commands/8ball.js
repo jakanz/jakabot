@@ -3,7 +3,7 @@ module.exports = {
     name: '8ball',
     description: "Ask a question and determine the answer to it with the magic 8-ball.",
     execute(message, args){
-        if(!args[0]){message.reply("How did you manage to forget to ask a magic 8-ball a question?")}
+        if(!args[0] || args[0].endsWith("?") == false ){message.reply("How did you manage to forget to ask a magic 8-ball a question?")}
         else {
             var possiblePredictions = ['ballpositive', 'ballnoncommittant', 'ballnegative'] // TODO: Add 2/4 positive - 1/4 noncomm - 1/4 negative chance functions
             const prediction = possiblePredictions[Math.floor(Math.random()*possiblePredictions.length)]
