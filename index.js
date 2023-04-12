@@ -8,14 +8,14 @@ const client = new Client({
                 GatewayIntentBits.MessageContent ],
     partials: [ Partials.Channel,
                 Partials.Message,
-                Partials.Raction ] });
+                Partials.Reaction ] });
 const config = require('./json/config.json')
 const cmdRsrc = require('./json/cmdRsrc.json')
 const fs = require('fs')
 
 client.login(config.token) 
 client.on('ready',() => {
-    console.log('Successful boot. [ ' + process.uptime() + ' ]')
+    console.log(`Successful boot. [${process.uptime()}]`)
     client.user.setActivity('Booting...')
     setInterval(() => {
         const status = cmdRsrc.randomStatus[Math.floor(Math.random() * cmdRsrc.randomStatus.length)]
@@ -31,6 +31,8 @@ for(const file of commandFiles){
 client.on('messageCreate', message => {
     if(!message.content.startsWith(config.prefix) || message.author.bot) return
     const args = message.content.slice(config.prefix.length).split(/ +/)
-    const command = args.shift().toLowerCase() 
-    if (cmdRsrc.commandList.includes(command)) { 
-        client.commands.get(command).execute(message,args) }})
+    const command = args.shift().toLowerCase()
+    try {client.commands.get(command).execute(message,args)}
+    catch (error) {
+        if (!cmdRsrc.commandList.includes(command)){message.reply('**That command does not exist** - please use j!help or /help *(slash command)* for information.')}
+        else{console.error(error); message.reply('There was an error executing that command.')}} })

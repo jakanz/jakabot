@@ -1,4 +1,3 @@
-const fs = require('fs')
 module.exports = {
     name: 'meme',
     description: "Funny memes, because what is a bot without fun?",
