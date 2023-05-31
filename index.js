@@ -35,4 +35,4 @@ client.on('messageCreate', message => {
     try {client.commands.get(command).execute(message,args)}
     catch (error) {
         if (!cmdRsrc.commandList.includes(command)){message.reply('**That command does not exist** - please use j!help or /help *(slash command)* for information.')}
-        else{console.error(error); message.reply('There was an error executing that command.')}} })
+        else{console.error(error); message.reply('There was an error executing that command. (Contact the developer [jakanz#6969] and have them check the console logs.)')}} })
