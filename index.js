@@ -13,7 +13,7 @@ const client = new Client({
 const config = require('./json/config.json')
 const cmdRsrc = require('./json/cmdRsrc.json')
 
-client.login(config.token) 
+client.login(config.token)
 client.on('ready',() => {
     console.log(`Successful boot. [${process.uptime()}]`)
     client.user.setActivity('Booting...')
